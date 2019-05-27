@@ -29,6 +29,20 @@ namespace PersonalDiary.Data
             }
 
             context.SaveChanges();
+
+            var diaries = new Diary[]
+            {
+                new Diary{Title="MY FIRST EDIARY",
+                    CreatedDate =DateTime.Parse("05/16/2019 05:55PM"),
+                     }
+            };
+
+            foreach (Entry e in entries)
+            {
+                context.Entries.Add(e);
+            }
+
+            context.SaveChanges();
         }
     }
 }
