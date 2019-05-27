@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace PersonalDiary.Models
 {
-    public class Entry
+    public class Diary
     {
         public int ID { get; set; }
-        public DateTime Date { get; set; }
-        public string Text { get; set; }
+        public string Title { get; set; }
+        public DateTime CreatedDate { get; set; }
 
-        public Diary Diary { get; set; }
+        public ICollection<Entry> Entries { get; set; }
     }
 }
