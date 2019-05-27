@@ -37,9 +37,9 @@ namespace PersonalDiary.Data
                      }
             };
 
-            foreach (Entry e in entries)
+            foreach (Diary e in diaries)
             {
-                context.Entries.Add(e);
+                context.Diaries.Add(e);
             }
 
             context.SaveChanges();
