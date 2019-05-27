@@ -12,7 +12,7 @@ namespace PersonalDiary.Data
         {
             context.Database.EnsureCreated();
 
-            if(context.Entries.Any())
+            if (context.Entries.Any() && context.Diaries.Any())
             {
                 return; //db has been seeded or has data
             }
@@ -30,10 +30,11 @@ namespace PersonalDiary.Data
 
             context.SaveChanges();
 
+
             var diaries = new Diary[]
             {
                 new Diary{Title="MY FIRST EDIARY",
-                    CreatedDate =DateTime.Parse("05/16/2019 05:55PM"),
+                    CreatedDate =DateTime.Parse("05/16/2019 05:55PM")
                      }
             };
 
