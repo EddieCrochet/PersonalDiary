@@ -28,8 +28,6 @@ namespace PersonalDiary.Data
                 context.Entries.Add(e);
             }
 
-            context.SaveChanges();
-
 
             var diaries = new Diary[]
             {
