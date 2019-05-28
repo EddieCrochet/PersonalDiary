@@ -20,8 +20,7 @@ namespace PersonalDiary.Data
             var entries = new Entry[]
             {
                 new Entry{Date=DateTime.Parse("05/16/2019 05:55PM"),
-                    Text ="Wowzers, it's my bday",
-                Diary=new Diary }
+                    Text ="Wowzers, it's my bday" }
             };
 
             foreach(Entry e in entries)
