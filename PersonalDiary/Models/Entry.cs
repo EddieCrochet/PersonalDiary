@@ -10,7 +10,6 @@ namespace PersonalDiary.Models
         public int ID { get; set; }
         public DateTime Date { get; set; }
         public string Text { get; set; }
-
         public Diary Diary { get; set; }
     }
 }
