@@ -34,7 +34,7 @@ namespace PersonalDiary.Controllers
             }
 
             var entry = await _context.Entries
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.EntryID == id);
             if (entry == null)
             {
                 return NotFound();
@@ -88,7 +88,7 @@ namespace PersonalDiary.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,Date,Text")] Entry entry)
         {
-            if (id != entry.ID)
+            if (id != entry.EntryID)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace PersonalDiary.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!EntryExists(entry.ID))
+                    if (!EntryExists(entry.EntryID))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace PersonalDiary.Controllers
             }
 
             var entry = await _context.Entries
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.EntryID == id);
             if (entry == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace PersonalDiary.Controllers
 
         private bool EntryExists(int id)
         {
-            return _context.Entries.Any(e => e.ID == id);
+            return _context.Entries.Any(e => e.EntryID == id);
         }
     }
 }
