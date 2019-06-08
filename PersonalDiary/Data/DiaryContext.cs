@@ -13,6 +13,12 @@ namespace PersonalDiary.Data
             {
             }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Diary>().HasKey(x => x.DiaryID).ForSqlServerIsClustered();
+            modelBuilder.Entity<Diary>().Property(x => x.DiaryID).UseSqlServerIdentityColumn();
+        }
+
         public DbSet<Entry> Entries { get; set; }
         public DbSet<Diary> Diaries { get; set; }
     }

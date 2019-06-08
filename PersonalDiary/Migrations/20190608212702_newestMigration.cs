@@ -2,7 +2,7 @@
 
 namespace PersonalDiary.Migrations
 {
-    public partial class CorrectMigration : Migration
+    public partial class newestMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -10,8 +10,8 @@ using PersonalDiary.Data;
 namespace PersonalDiary.Migrations
 {
     [DbContext(typeof(DiaryContext))]
-    [Migration("20190608202918_CorrectMigration")]
-    partial class CorrectMigration
+    [Migration("20190608212702_newestMigration")]
+    partial class newestMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
