@@ -7,7 +7,7 @@ namespace PersonalDiary.Models
 {
     public class Diary
     {
-        public int ID { get; set; }
+        public int DiaryID { get; set; }
         public string Title { get; set; }
         public DateTime CreatedDate { get; set; }
 
