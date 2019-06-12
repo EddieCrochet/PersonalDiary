@@ -54,7 +54,7 @@ namespace PersonalDiary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Date,Text")] Entry entry)
+        public async Task<IActionResult> Create([Bind("EntryID,Date,Text")] Entry entry)
         {
             if (ModelState.IsValid)
             {
