@@ -11,6 +11,5 @@ namespace PersonalDiary.Models
         public DateTime Date { get; set; }
         public string Text { get; set; }
         public int DiaryID { get; set; }
-
     }
 }
